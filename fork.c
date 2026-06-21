@@ -6,15 +6,15 @@
 int main()
 {
     pid_t pid ;
-    pid = fork();//it creates the two process
+    pid = fork(); //it creates the two process
     if(pid == 0)
     {
-        printf("Child Process\n");
+        printf("Child Process=%d \n",getpid());
     }
     else
     {
         wait(NULL); //Don't continue.Wait until one child process finishes.
-        printf("Parent Process\n");
+        printf("Parent Process=%d \n",getpid());
     }
 
     return 0;
