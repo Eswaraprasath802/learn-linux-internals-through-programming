@@ -12,10 +12,6 @@ int main() {
         if (pid == 0) {  // Child process
             printf("Child %d started. PID = %d\n", i + 1, getpid());
 
-            while (1) {
-                // Consume CPU
-            }
-
             exit(0);
         }
     }
